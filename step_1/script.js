@@ -16,7 +16,7 @@ google.load('feeds','1');
 // -----------------------------------------------------------------------------
 // 変数の宣言と代入
 // -----------------------------------------------------------------------------
-var RSSURL = 'https://news.google.com/news/feeds?ned=us&ie=UTF-8&oe=UTF-8&q=%E5%85%A5%E6%9C%AD&output=atom&num=30&hl=ja';
+var RSSURL = 'http://yokotakenji.me/log/?feed=rss2';
 var CONTAINER = $('#cntr');
 var feed;
 
