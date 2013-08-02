@@ -10,9 +10,6 @@
 
 'use strict';
 
-// google Feed APIの読み込み
-google.load('feeds','1');
-
 // -----------------------------------------------------------------------------
 // 変数の宣言と代入
 var RSSURL = 'http://yokotakenji.me/log/?feed=rss2';
@@ -43,8 +40,8 @@ var feedCallBack = function(result){
 }
 
 // -----------------------------------------------------------------------------
-// htmlの内容を読み込んだ後に実行したい内容を定義
-var onloaded = function(){
+// APIを読み込んだ後に実行したい内容を定義
+var apiCallBack = function(){
 	// フィードオブジェクトの作成。同時に読み込みRSSのURLを渡す
 	feed = new google.feeds.Feed(RSSURL);
 	// フィードの読み込みを開始。同時に読み込み後に処理させたい関数を渡す。
@@ -52,5 +49,6 @@ var onloaded = function(){
 };
 
 // -----------------------------------------------------------------------------
-// html読み込み後に実行されるように登録
-window.onload = onloaded;
+// API読み込み開始
+// google Feed APIの読み込み
+google.load('feeds','1',{callback:apiCallBack});
