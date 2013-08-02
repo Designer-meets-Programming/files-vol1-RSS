@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="jp-JP">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="myId"></ul>
+	<script src="lib/jquery-2.0.3.min.js"></script>
+	<script>
+		var i;
+		for(i=0; i<5; i++){
+			$('#myId').append('<li><a href="#">'+i+'回目</a></li>');
+		}
+	</script>
+</body>
+</html>
